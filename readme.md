@@ -4,6 +4,7 @@ A simple CSS starting point for new projects, this starting point framework will
 
 Starting structure
 
+```
 sass/
   ├── 0-plugins/
   │   ├── bourbon/
@@ -37,4 +38,4 @@ sass/
   │   └── _typography.scss
   ├── app.sass
   └── app.css
-
+```
