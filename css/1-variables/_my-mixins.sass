@@ -1,0 +1,43 @@
+// Set a variable to run the if statement against
+//$boolean: true !default
+//
+//=simple-mixin
+//  @if $boolean
+//    @debug "$boolean is #{$boolean}"
+//    display: block
+//  @else
+//    @debug "$boolean is #{$boolean}"
+//    display: none
+//
+//.some-selector
+//  +simple-mixin
+
+
+
+
+
+
+// Generate list and import list into background image
+//$list: glow-worm baxi worcester
+//
+//=banner-images
+//  @each $banner in $list
+//    .photo-#{$banner}
+//      background: image-url("../banners/banner-category-#{$banner}.png") no-repeat
+//
+//.banner-category
+//  +banner-images
+
+
+// Social icons mixin
+// $social: facebook twitter instagram
+
+//=social-icons
+//		&.social
+//			@each $icon in $social
+//				&.#{$icon}
+//					background-image:url("../images/social-#{$icon}-2.png") no-repeat
+//			&:hover
+//				opacity:0.7;
+ 
+

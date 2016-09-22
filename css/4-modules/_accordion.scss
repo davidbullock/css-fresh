@@ -1,0 +1,51 @@
+// COLLAPSE
+.collapse {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	@include jacket(ios) {
+		transition: $transition-height;
+	}
+
+	&.in {
+		height: auto;
+	}
+}
+
+
+// FADE
+.fade {
+	opacity: 0;
+	@include jacket(ios) {
+		transition: $transition-opacity;
+	}
+
+	&.in {
+		opacity: 1;
+	}
+}
+
+// ACCORDION
+// .c-accordion
+.c-accordion {
+
+	// .c-accordion__body
+	&__body {
+		position: relative;
+		overflow: hidden;
+		min-height: 0;
+		max-height: 0;
+		opacity: 0;
+
+		@include jacket(ios) {
+			transition: $transition;
+		}
+		
+		// js-active + .c-accordion__body
+		.js-active + & {
+			min-height: 20px;
+			max-height: 9999px;
+			opacity: 1;
+		}
+	}
+}

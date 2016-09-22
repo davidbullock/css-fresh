@@ -1,0 +1,58 @@
+//== Base Styles / Properties
+
+// Base Font Families
+$base-font-family:								"Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family-serif:						Georgia, "Times New Roman", Times, serif;
+$base-font-family-console:						Monaco, Menlo, Consolas, "Courier New", monospace;
+
+// Base Colours
+$base-color:									#222; // body copy colour
+// $base-background-color:						$grey-white;
+$base-sub-color:								darken($base-color, 2%); // for sub titles and heading small
+$base-background-color:							#ffffff; // default background for items and copy - start using $base-background-color in global styling
+$base-body-background-color:					#ccc;
+$base-body-background-color-inverse:			$grey-dark;
+$base-color-inverse:							$base-background-color; // body copy colour inverse
+$base-footer-head-color:						$grey-white;
+$base-footer-body-color:						$base-color;
+// $base-background-color-inner:				lighten($base-body-background-color, 2%); // lighten
+$base-background-color-inner:					darken($base-body-background-color, 2%); // darken
+$base-color-link:								purple;
+$base-color-link-hover:							darken($base-color-link, 2%);
+$base-color-link-active:						darken($base-color-link, 4%);
+$base-bg-link:									#ffffff;
+$base-bg-link-hover:							$grey-white;
+$base-bg-link-active:							$base-body-background-color;
+
+
+// Font Size / Line Height
+$base-font-size:								16px;
+$base-font-size-desktop:						$base-font-size;
+$base-font-size-tablet:							$base-font-size;
+$base-font-size-mobile:							$base-font-size;
+
+
+// Box Shadow
+$box-shadow:									transparentize(black, 0.05) !default;
+
+//== Transitions
+
+// .Example {
+// 	transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];
+
+// 	transition: background-color 500ms ease-out 1s;
+// }
+
+$transition:									all 0.2s ease-in-out !default;
+$transition-border-and-shadow:					border 0.2s ease, box-shadow 0.2s ease !default;
+$transition-bg:									background 0.2s ease !default;
+$transition-bg-color:							background-color 0.2s ease !default;
+$transition-color:								color 0.2s ease !default;
+$transition-bg-and-shadow:						background 0.2s ease, box-shadow 0.2s ease !default;
+$transition-height:								height 0.2s ease !default;
+$transition-max-height:							max-height 0.2s ease !default;
+$transition-opacity:							opacity 0.2s ease !default;
+$transition-header:								opacity 0.2s ease, height 0.2s ease !default;
+$transisiton-user-prefs:						rotate 0.2s ease-in-out !default;
+
+

@@ -1,0 +1,73 @@
+// SHOW HIDE
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
+.invisible {
+	visibility: hidden;
+}
+.affix {
+	position: fixed;
+}
+
+// ELLIPSIS
+.ellipsis {
+	// white-space: nowrap;
+	// overflow: hidden;
+	// text-overflow: ellipsis;
+	// vertical-align: text-bottom;
+
+	// @include ellipsisie;
+
+	@extend %ellipsis;
+}
+
+// HIDE NO JS
+.hide-no-js {
+	visibility: hidden;
+	// display: none;
+}
+
+// JS HIDE
+.js-hide {
+	display: none;
+}
+
+
+// HIDE TEXT
+.hide-text {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+// NOWRAP
+.nowrap {
+	white-space: nowrap;
+}
+
+// SELECT
+// select:focus,
+// select {
+// 	outline: none;
+// }
+
+::selection {
+	background: blue;
+	color: #ffffff;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: blue;
+	color: #ffffff;
+	text-shadow: none;
+}
+
+// RELATIVE
+.relative {
+	position: relative;
+}

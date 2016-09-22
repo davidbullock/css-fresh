@@ -1,0 +1,14 @@
+// == GLOBAL STYLES ==
+
+// /* GLOBAL STYLES */
+%container {
+
+	// %box-container-shadows
+	&-shadows {
+
+		// %box-container-shadows-desktop
+		&-desktop {
+			box-shadow: $box-shadow;
+		}
+	}
+}

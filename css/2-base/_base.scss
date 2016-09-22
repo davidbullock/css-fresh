@@ -1,0 +1,19 @@
+@include jacket(critical) {
+	// BOX MODEL / BOX-SIZING
+	* {
+		box-sizing: border-box;
+
+		&:before,
+		&:after {
+			box-sizing: border-box;
+		}
+	}
+
+	body {
+		margin: 0;
+		font-family: $base-font-family;
+		color: $base-color;
+		background-color: $base-body-background-color;
+		font-size: $base-font-size;
+	}
+}

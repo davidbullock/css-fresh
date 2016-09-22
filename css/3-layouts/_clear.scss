@@ -1,0 +1,16 @@
+// CLEARFIX
+
+@include jacket(critical) {
+
+	.clearfix {
+		@extend %clear-layout;
+	}
+}
+
+// CLEAR FLOAT for ROW-FLUID
+@include jacket(critical) {
+	.row-fluid {
+		width: 100%;
+		@extend %clear-layout;
+	}
+}

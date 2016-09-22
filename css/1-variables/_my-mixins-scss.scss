@@ -1,0 +1,95 @@
+// @example scss - Usage
+// .element {
+// 	@include clear;
+// }
+
+@mixin clear {
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin noclear {
+	&:before,
+	&:after {
+		display: none;
+	}
+}
+
+@mixin append-prepend {
+	width: 100%;
+	@include clear;
+
+	> div,
+	> input,
+	> button,
+	> a {
+		float: left;
+
+		&:last-child {
+			margin-left: -1px;
+		}
+	}
+}
+
+@mixin button-make {
+	display: inline-block;
+	padding: 4px 12px;
+	line-height: $base-line-height;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border: $border;
+}
+
+// Critical CSS - call 
+$critical-css-only:true !default;
+@mixin critical($critical-only:true){
+	@if (($critical-css-only and $critical-only) or (not $critical-css-only and not $critical-only)){
+		@content;
+	}
+}
+
+// Ellipsis - IE compatible
+@mixin ellipsisie {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	vertical-align: text-bottom;
+}
+
+
+// Structure SCSS 
+@mixin cols($num) {
+	width: ($one_col * $num) + ($gutter * ($num - 1));
+}
+ 
+// @mixin sub_cols($num_child, $num_parent) {
+// 	$parent_size: ($one_col * $num_parent) + ($gutter * ($num_parent - 1));
+// 	$child_size: ($one_col * $num_child) + ($gutter * ($num_child - 1));
+// 	margin-left: ($gutter / $parent_size) * 100%;
+// 	width: ($child_size / $parent_size) * 100%;
+// }
+
+// Strip Unit
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+// Swatch
+@mixin swatch($swatch: $brand-red-hue, $amount: 50%, $color: #ffffff) {
+	background: $swatch;
+
+	&::before {
+		content: "#{$swatch}";
+		color: $color;
+		background-color: shade($swatch, $amount);
+	}
+}

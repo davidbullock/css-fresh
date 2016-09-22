@@ -1,0 +1,47 @@
+// == GLOBAL LAYOUT ==
+
+// /* GLOBAL LAYOUT */
+
+// FLOAT LEFT
+%float-left {
+	display: inline-block;
+	float: left;
+}
+
+// FLOAT LEFT ONLY
+%float-left-only {
+	float: left;
+}
+
+// FLOAT RIGHT ONLY
+%float-right-only {
+	float: right;
+}
+
+// FLOAT NONE ONLY
+%float-none-only {
+	float: none;
+}
+
+// FLOAT LEFT WIDTH
+%float-left-width {
+	width: 100%;
+	float: left;
+}
+
+// CLEAR LAYOUT
+%clear-layout {
+	@include clear;
+}
+
+
+// FULL WIDTH
+%full-width {
+	width: 100%;
+
+	// %full-width-block {
+	&-block {
+		width: 100%;
+		display: block;
+	}
+}

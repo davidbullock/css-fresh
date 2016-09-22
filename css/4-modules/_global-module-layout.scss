@@ -1,0 +1,208 @@
+// == GLOBAL MODULE LAYOUT ==
+
+// /* GLOBAL MODULE LAYOUT */
+
+// FLEX LAYOUT
+
+// Top - Align Stretch
+%flex-top-stretch {
+	display: flex;
+	align-items: stretch;
+}
+
+// Columns - add widths onto component
+%flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+// Column Content - Align Auto
+%flex-align-auto {
+	flex: 1 0 auto;
+}
+
+// TABLE AUTO CENTER TEXT
+%table-center {
+	// %table-center-top
+	&-top {
+		display: table;
+	}
+
+	// %table-center-middle
+	&-middle {
+		display: table-cell;
+		// set height in module
+	}
+
+	// %table-center-inner - optional, use this if you need a max height that can't be broken.
+	&-inner {
+		display: block;
+		overflow: hidden;
+		// set max-height in module, 10px-20px less than height set in %table-center-middle should do it.
+	}
+}
+
+// LIST MODULE LAYOUT
+
+// %ul
+%ul {
+
+	// %ul-unstyled
+	&-unstyled {
+		list-style: none;
+		margin-left: 0;
+	}
+}
+
+
+
+// NOTE - Affects ul > li > a and hover/active OR span states ONLY! Not ul OR li
+// %list
+%list {
+
+	// %list-padding
+	&-padding {
+
+		// %list-padding-desktop
+		&-desktop {
+			display: block;
+			padding: $list-padding-desktop;
+		}
+		
+		// %list-padding-mobile
+		&-mobile {
+			display: block;
+			padding: $list-padding-mobile;
+		}
+
+		// %list-padding-outline
+		&-outline {
+
+			// %list-padding-outline-desktop
+			&-desktop {
+				padding: $base-button-padding-desktop-flex;
+			}
+			
+			// %list-padding-outline-mobile
+			&-mobile {
+				padding: $base-button-padding-mobile-flex;
+			}
+		}
+
+		// %list-padding-large
+		&-large {
+
+			// %list-padding-large-desktop
+			&-desktop {
+				display: block;
+				padding: $list-padding-large-desktop;
+			}
+			
+			// %list-padding-large-mobile
+			&-mobile {
+				display: block;
+				padding: $list-padding-large-mobile;
+			}
+		}
+	}
+}
+
+%btn {
+
+	// %btn-padding
+	&-padding {
+
+		// %btn-padding-desktop
+		&-desktop {
+			padding: $btn-padding-desktop;
+		}
+
+		// %btn-padding-mobile
+		&-mobile {
+			padding: $btn-padding-desktop;
+		}
+
+		// %btn-padding-large
+		&-large {
+
+			// %btn-padding-large-desktop
+			&-desktop {
+				padding: $btn-padding-large-desktop;
+			}
+
+			// %btn-padding-large-mobile
+			&-mobile {
+				padding: $btn-padding-large-mobile;
+			}
+		}
+
+		// %btn-padding-small
+		&-small {
+
+			// %btn-padding-small-desktop
+			&-desktop {
+				padding: $btn-padding-small-desktop;
+			}
+
+			// %btn-padding-small-mobile
+			&-mobile {
+				padding: $btn-padding-small-mobile;
+			}
+		}
+	}
+}
+
+// CLEAR MODULE
+%float-left-module {
+	display: inline-block;
+	float: left;
+}
+
+// %clear-module
+%clear-module {
+	@include clear;
+}
+
+
+// Images
+
+// %image-center
+%image-center {
+
+	// %image-center-desktop
+	&-desktop {
+
+	}
+
+	// %image-center-mobile
+	&-mobile {
+		min-width: 100%;
+	}
+
+	// %image-center-span-desktop
+	&-span-desktop {
+		text-align: center;
+		display: block;
+		// vertical-align: central;
+	}
+
+	// %image-center-span-mobile
+	&-span-mobile {
+		text-align: center;
+		display: block;
+		min-width: 100%;
+	}
+
+	// %image-center-img-desktop
+	// used to reset default line height on missing images for alt text
+	&-img-desktop {
+		line-height: $base-line-height;
+	}
+}
+
+
+// ellipsis
+%ellipsis {
+	@include ellipsisie;
+}
+
