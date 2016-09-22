@@ -2,7 +2,7 @@
 
 A simple CSS starting point for new projects, this starting point framework will expand and grow as the project grows. Includes Bourbon and Bootstrap, add modules to the modules directory. Enable / disable partials using the directory SASS partials. Enable / disable an entire directory in the main SASS file (app.sass). Extend global styles using ghost classes in the global style partials.
 
-Starting structure
+## Starting Structure
 
 ```
 sass/
