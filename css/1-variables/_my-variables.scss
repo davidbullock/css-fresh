@@ -38,9 +38,9 @@ $base-color:									#222; // body copy colour
 $base-sub-color:								darken($base-color, 2%); // for sub titles and heading small
 $base-background-color:							#ffffff; // default background for items and copy - start using $base-background-color in global styling
 $base-body-background-color:					#ccc;
-$base-body-background-color-inverse:			$grey-dark;
+$base-body-background-color-inverse:			darkgrey;
 $base-color-inverse:							$base-background-color; // body copy colour inverse
-$base-footer-head-color:						$grey-white;
+$base-footer-head-color:						lightgrey;
 $base-footer-body-color:						$base-color;
 // $base-background-color-inner:				lighten($base-body-background-color, 2%); // lighten
 $base-background-color-inner:					darken($base-body-background-color, 2%); // darken
@@ -48,7 +48,7 @@ $base-color-link:								purple;
 $base-color-link-hover:							darken($base-color-link, 2%);
 $base-color-link-active:						darken($base-color-link, 4%);
 $base-bg-link:									#ffffff;
-$base-bg-link-hover:							$grey-white;
+$base-bg-link-hover:							lightgrey;
 $base-bg-link-active:							$base-body-background-color;
 
 
@@ -58,6 +58,36 @@ $base-font-size-desktop:						$base-font-size;
 $base-font-size-tablet:							$base-font-size;
 $base-font-size-mobile:							$base-font-size;
 
+
+// List Padding
+$list-padding-top-desktop:						6px;
+$list-padding-left-desktop:						12px;
+
+$list-padding-top-large-desktop:				10px;
+$list-padding-left-large-desktop:				$list-padding-left-desktop;
+
+$list-padding-desktop:							$list-padding-top-desktop $list-padding-left-desktop;
+$list-padding-mobile:							$list-padding-desktop;
+$list-padding-large-desktop:					$list-padding-top-large-desktop $list-padding-left-large-desktop;
+$list-padding-large-mobile:						$list-padding-large-desktop;
+
+// Button Padding
+$btn-padding-top-desktop:						4px;
+$btn-padding-left-desktop:						$list-padding-left-desktop;
+
+$btn-padding-desktop:							$btn-padding-top-desktop $btn-padding-left-desktop;
+$btn-padding-mobile:							$btn-padding-desktop;
+
+// Bootstrap btn padding - consider bringing inline with list large padding - check for line heights
+$btn-padding-large-desktop:						11px 19px;
+$btn-padding-large-mobile:						$btn-padding-large-desktop;
+$btn-padding-small-desktop:						2px 10px;
+$btn-padding-small-mobile:						$btn-padding-small-desktop;
+
+$base-button-padding:							$btn-padding-desktop !default; // 6px 12px
+$base-button-padding-mobile-flex:				$list-padding-top-large-desktop 0; // 10px 0
+$base-button-padding-desktop-flex:				$base-button-padding-mobile-flex;
+// when set at 12px 0 - button total height = 44px, Google recommended mobile button height
 
 // Box Shadow
 $box-shadow:									transparentize(black, 0.05) !default;

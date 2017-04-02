@@ -1,7 +1,5 @@
 // == GLOBAL LAYOUT ==
 
-// /* GLOBAL LAYOUT */
-
 // FLOAT LEFT
 %float-left {
 	display: inline-block;
@@ -33,7 +31,6 @@
 %clear-layout {
 	@include clear;
 }
-
 
 // FULL WIDTH
 %full-width {
