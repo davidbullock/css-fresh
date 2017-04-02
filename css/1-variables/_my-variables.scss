@@ -1,9 +1,36 @@
 //== Base Styles / Properties
 
 // Base Font Families
-$base-font-family:								"Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-family-serif:						Georgia, "Times New Roman", Times, serif;
-$base-font-family-console:						Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-sans-serif-old:					"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:								Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:							Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+// The default web fonts (Helvetica Neue, Helvetica, and Arial) have been dropped in and replaced with a "native font stack" for optimum text rendering on every device and OS. Read more about native font stacks in this Smashing Magazine article: 
+// https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+$font-family-sans-serif:
+	// Safari for OS X and iOS (San Francisco)
+	-apple-system,
+	// Chrome for OS X (San Francisco)
+	BlinkMacSystemFont,
+	// Windows
+	"Segoe UI",
+	// Android
+	"Roboto",
+	// Linux
+	"Oxygen", // KDE
+	"Ubuntu",
+	"Cantarell", // GNOME
+	// Firefox OS [R.I.P.]
+	"Fira Sans",
+	// Older Android
+	"Droid Sans",
+	// Basic web fallback
+	"Helvetica Neue", Arial, sans-serif !default;
+
+// use these font variables in base, or modules, etc. where required
+$base-font-family:								$font-family-sans-serif !default;
+$base-font-family-serif:						$font-family-serif !default;
+$base-font-family-console:						$font-family-monospace !default;
 
 // Base Colours
 $base-color:									#222; // body copy colour
