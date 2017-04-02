@@ -12,3 +12,47 @@
 		}
 	}
 }
+
+
+// Grid Item Styles
+
+// %grid-style
+%grid-style {
+
+	// %grid-style-item
+	&-item {
+		background-color: $grid-item-background-color;
+		border-bottom: $grid-item-border;
+		border-right: $grid-item-border;
+	}
+
+	// %grid-style-line - this is for hiding outer lines on grid listings, shared settings only
+	&-line {
+		content: " ";
+		background-color: $grid-border-color;
+		position: absolute;
+		display: block;
+
+		// %grid-style-line-right - styles for ::after only
+		&-right {
+			height: 100%;
+			right: 0px;
+			width: 2px; // safely ensures pixels are hidden when dealing with percentages
+		}
+
+		// %grid-style-line-bottom - styles for ::before only
+		&-bottom {
+			z-index: 1;
+			width: 100%;
+			bottom: 0px;
+			height: 1px;
+		}
+
+		// %grid-style-line-container - styles for container, lines behave properly with these properties
+		&-container {
+			position: relative;
+			overflow: hidden;
+			background-color: $grid-item-background-color;
+		}
+	}
+}

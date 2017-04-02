@@ -52,6 +52,29 @@ $base-bg-link-hover:							lightgrey;
 $base-bg-link-active:							$base-body-background-color;
 
 
+// Base Heights / Widths / Margins / Padding
+
+// Margins
+$base-margin-desktop:							10px;
+$base-margin-large-desktop:						20px;
+
+$base-margin-mobile:							10px;
+$base-margin-large-mobile:						$base-margin-mobile;
+
+$base-margin:									$base-margin-large-desktop; // old - kill when they are no longer used
+
+$base-margin-percent:							2.564102564102564% !default; // same for desktop, tablet, and mobile.
+$base-margin-left-percent:						2.127659574468085% !default;
+
+// Padding
+$base-padding-desktop:							10px;
+$base-padding-large-desktop:					20px;
+$base-padding-tablet:							$base-padding-desktop;
+$base-padding-large-tablet:						$base-padding-large-desktop;
+$base-padding-mobile-small:						5px;
+$base-padding-mobile:							$base-padding-desktop;
+$base-padding-large-mobile:						$base-padding-desktop;
+
 // Font Size / Line Height
 $base-font-size:								16px;
 $base-font-size-desktop:						$base-font-size;
@@ -112,4 +135,92 @@ $transition-opacity:							opacity 0.2s ease !default;
 $transition-header:								opacity 0.2s ease, height 0.2s ease !default;
 $transisiton-user-prefs:						rotate 0.2s ease-in-out !default;
 
+
+
+//== Grid
+
+// Grid Item Styles
+// updated for flat styles
+$grid-border-color:								$base-background-color; // for matching background colour
+$grid-border-color-line:						$base-body-background-color; // for body background-color
+$grid-border-color-outline:						#ccc; // for outlining grid items
+$grid-item-background-color:					$base-background-color;
+$grid-list-background-color:					$base-background-color;
+// $grid-items-background:						$grid-list-background-color;
+// $grid-item-background:						$grid-item-background-color;
+$grid-sq-line-bg-colour: 						$base-body-background-color;
+$grid-item-border:								1px solid $grid-border-color-line;
+
+
+// Grid Buttons
+$grid-button-padding-desktop:					12px; // raised by 2px to 12px to make way for btn-outline border
+
+$grid-button-product-outer-desktop: 			70px;
+$grid-button-product-inner-desktop:				($grid-button-product-outer-desktop - $grid-button-padding-desktop);
+
+$grid-button-product-outer-mobile:	 			110px;
+$grid-button-product-inner-mobile:				($grid-button-product-outer-mobile - $grid-button-padding-desktop);
+
+$grid-button-product-outer-swipe-desktop: 		90px;
+$grid-button-product-inner-swipe-desktop:		($grid-button-product-outer-swipe-desktop - $grid-button-padding-desktop);
+
+$grid-button-category-outer-desktop: 			50px;
+$grid-button-category-inner-desktop:			($grid-button-category-outer-desktop - $grid-button-padding-desktop);
+
+$grid-button-category-outer-mobile: 			70px;
+$grid-button-category-inner-mobile:				($grid-button-category-outer-mobile - $grid-button-padding-desktop);
+
+// Grid Images
+// old
+// $base-grid-landscape-height:					443px;
+// $base-grid-landscape-height-product: 		($base-grid-landscape-height + 68px);
+
+// Grid variables
+$grid-pad: 										1em; // Important - use em, font-size controls padding
+// $grid-background-colour: #ffffff;
+// $grid-border: $border;
+
+$grid-container-tree-ul-left:					5%;
+$grid-markup: 									((100% - $grid-container-tree-ul-left) / 100); // 95 @ 5% width
+$grid-bullet-line-height:						(1em * 1.5);
+
+// Grid Square Category Item Listing
+$grid-grid-sq-c-item-height:					10em;
+$grid-grid-sq-c-item-height-double:				(($grid-grid-sq-c-item-height * 2) + $grid-pad); // used with o-grid--pad-off, includes half height padding with + 1em
+
+// mobile has half the padding size, so double height for mobile
+$grid-grid-sq-c-item-height-mobile:				20em;
+$grid-grid-sq-c-item-height-double-mobile:		(($grid-grid-sq-c-item-height-mobile * 2) + $grid-pad); // used with o-grid--pad-off, includes half height padding with + 1em
+
+//== Layout
+// Wide Layout Breaks
+$wide-layout-primary-width:						66%;
+$wide-layout-secondary-width:					(100% - $wide-layout-primary-width) - $base-margin-left-percent;
+
+//== Media Queries
+
+// Breakpoints
+
+// my break variables
+$break-mobile-min:								320px;
+$break-mobile-large-min:						400px; // (max-width: 767px) and (min-width: 400px);
+$break-mobile-max:								767px; // (max-width: 767px);
+$break-tablet-min:								768px; // (min-width: 768px);
+$break-tablet-max:								959px; // (max-width: 959px) and (min-width: 768px);
+$break-desktop-min:								960px; // (min-width: 960px);
+$break-desktop-max:								1199px; // (max-width: 1199px) and (min-width: 960px);
+$break-desktop-large-min:						1200px; // (min-width: 1200px);
+
+// neat new-breakpoint mixin
+// mobile first, use tablet-desktop to suit all media queries required after the max mobile with
+$mobile-small:									new-breakpoint(max-width $break-mobile-min); // min mobile only 320px screen width
+$mobile:										new-breakpoint(max-width $break-mobile-max); // mobile to large mobile only
+$mobile-large:									new-breakpoint(max-width $break-mobile-max min-width $break-mobile-large-min); // large mobile only
+$mobile-tablet:									new-breakpoint(max-width $break-tablet-max); // mobile to tablet only
+$tablet:										new-breakpoint(max-width $break-tablet-max min-width $break-tablet-min); // tablet only
+$tablet-desktop:								new-breakpoint(min-width $break-tablet-min); // tablet and above
+$desktop:										new-breakpoint(min-width $break-desktop-min); // desktop and above
+$desktop-only:									new-breakpoint(max-width $break-desktop-min min-width $break-tablet-min); // tablet to desktop only
+$desktop-desktop-large:							new-breakpoint(max-width $break-desktop-max min-width $break-desktop-min); // dt and lgdt only
+$desktop-large:									new-breakpoint(min-width $break-desktop-large-min); // large desktop and above
 

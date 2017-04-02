@@ -42,3 +42,50 @@
 		display: block;
 	}
 }
+
+// WIDTHS - percent / fractions
+
+%width {
+	// %width-one
+	&-one {
+		width: 100%;
+	}
+
+	// Thirds
+
+	// %width-one-third
+	&-one-third {
+		width: (100% / 3);
+	}
+	// %width-two-thirds
+	&-two-thirds {
+		width: ((100% / 3) * 2);
+	}
+	// %width-one-sixth
+	&-one-sixth {
+		width: (100% / 6);
+	}
+
+	// Halves and Quarters
+
+	// %width-one-half
+	&-one-half {
+		width: (100% / 2);
+	}
+	// %width-one-quarter
+	&-one-quarter {
+		width: (100% / 4);
+	}
+	// %width-one-fifth
+	&-one-fifth {
+		width: (100% / 5);
+	}
+	// %width-three-quarters
+	&-three-quarters {
+		width: ((100% / 4) * 3);
+	}
+	// %width-one-eighth
+	&-one-eighth {
+		width: (100% / 8);
+	}
+}
